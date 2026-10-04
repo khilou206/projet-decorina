@@ -1,0 +1,273 @@
+/* ================================
+   CATEGORY PAGE
+================================ */
+
+.category-page {
+  min-height: 100vh;
+  background: #f7f5f0;
+  color: #171717;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.category-header {
+  padding: 110px 30px 85px;
+  text-align: center;
+  background: #f7f5f0;
+}
+
+.category-header-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.category-kicker {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.category-header h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 82px);
+  font-weight: 500;
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+  text-transform: uppercase;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.category-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 30px auto;
+
+  background: #171717;
+}
+
+.category-header p {
+  max-width: 540px;
+  margin: 0 auto;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #666;
+}
+
+
+/* ================================
+   PRODUCTS SECTION
+================================ */
+
+.category-products {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 20px 40px 100px;
+}
+
+
+/* ================================
+   TOP BAR
+================================ */
+
+.category-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #dedbd4;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.category-small-line {
+  flex: 1;
+
+  height: 1px;
+
+  margin: 0 25px;
+
+  background: #dedbd4;
+}
+
+
+/* ================================
+   PRODUCTS GRID
+================================ */
+
+.products-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* ================================
+   PRODUCT CARD
+================================ */
+
+/*
+   هاد الجزء كيأثر على ProductCard
+   إلا كانت classes مختلفة عندك،
+   صيفط ليا ProductCard.jsx ونضبطهم
+*/
+
+.products-grid > * {
+  min-width: 0;
+}
+
+
+/* ================================
+   EMPTY
+================================ */
+
+.empty-category {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.empty-category h2 {
+  margin: 0 0 12px;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.empty-category p {
+  margin: 0;
+
+  color: #777;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1100px) {
+
+  .products-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 750px) {
+
+  .category-header {
+    padding: 75px 20px 60px;
+  }
+
+  .category-header h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .category-header p {
+    font-size: 14px;
+  }
+
+  .category-products {
+    padding: 10px 18px 70px;
+  }
+
+  .category-top {
+    font-size: 9px;
+  }
+
+  .category-top span:last-child {
+    display: none;
+  }
+
+  .category-small-line {
+    margin-left: 15px;
+  }
+
+  .products-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .category-header {
+    padding: 65px 18px 50px;
+  }
+
+  .category-header h1 {
+    font-size: 34px;
+  }
+
+  .category-kicker {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .category-header p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .category-products {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .products-grid {
+    gap: 10px;
+  }
+
+}
